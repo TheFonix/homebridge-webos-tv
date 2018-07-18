@@ -45,6 +45,10 @@ function webosTvAccessory(log, config, api) {
 
     this.lgtv.on('connect', () => {
         this.log.info('webOS - connected to TV');
+        this.log.info('===========================');
+        this.log.info('- Volume Settings removed -');
+        this.log.info('https://github.com/TheFonix');
+        this.log.info('===========================');
         this.connected = true;
         if (!this.checkAliveInterval && this.pollingEnabled) {
             this.checkAliveInterval = setInterval(this.checkTVState.bind(this, this.pollCallback.bind(this)), this.alivePollingInterval);
